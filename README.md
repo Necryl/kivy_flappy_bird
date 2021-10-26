@@ -1,0 +1,2 @@
+I made this project to make to learn kivy. It's basically just the classic flappy bird made with kivy and python.
+I was following Erik Sandberg's tutorial (https://www.youtube.com/watch?v=cGYMZB_peBM&list=PLy5hjmUzdc0mSEN7WxUQ_HlP6X_OdvMlq)
