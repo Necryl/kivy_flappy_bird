@@ -5,6 +5,8 @@ from kivy.uix.image import Image
 from kivy.core.window import Window
 from kivy.clock import Clock
 
+from pipe import Pipe
+
 
 class Background(Widget):
     cloud_texture = ObjectProperty(None)
@@ -22,7 +24,7 @@ class Background(Widget):
         self.floor_texture.wrap = 'repeat'
         self.floor_texture.uvsize = (Window.width / self.floor_texture.width, -1)
 
-    def scroll_textures(self, time_passed):
+    def scroll_textures(self, time_passed): 
         # Update the uvpos of the texture
         self.cloud_texture.uvpos = ((self.cloud_texture.uvpos[0] + time_passed - time_passed/2 - time_passed/4)%Window.width, self.cloud_texture.uvpos[1])
         self.floor_texture.uvpos = ((self.floor_texture.uvpos[0] + time_passed + time_passed/2)%Window.width, self.floor_texture.uvpos[1])

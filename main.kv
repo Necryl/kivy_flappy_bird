@@ -1,4 +1,4 @@
-#:kivy 2.0.0
+#:include pipe.kv
 
 FloatLayout:
     Background:
@@ -16,3 +16,13 @@ FloatLayout:
                 size: self.width, 96
                 pos: self.pos[0], self.pos[1]
                 texture: self.floor_texture
+    
+    Pipe:
+        size_hint: None, None
+        size: 64, root.height - 96
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, .2
+            Rectangle:
+                size: self.size
+                pos: self.pos
